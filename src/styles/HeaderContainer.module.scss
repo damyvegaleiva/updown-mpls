@@ -53,17 +53,18 @@ header {
 }
 
 // ----------------------------------BREAKPOINT
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   header {
     @include display-f(column, nowrap, center, center);
     height: 100vh;
+    padding: 10px 0;
 
     .header__updown {
-      font-size: 20rem;
+      font-size: 15rem;
     }
 
     .header__location {
-      font-size: $textLarge;
+      font-size: $textMedium;
     }
 
     .header__bottom-container {
@@ -71,7 +72,7 @@ header {
 
       .header__insert-coin {
         @include display-f(row, wrap, center, center);
-        font-size: $textMedium;
+        font-size: 2rem;
         text-shadow: none;
         -webkit-text-stroke: 1px map-get($map: $colorPalette, $key: "darkBlack");
         -webkit-text-fill-color: rgb(255, 255, 0);
@@ -80,8 +81,8 @@ header {
       }
 
       .header__img--size {
-        width: 115px;
-        height: 115px;
+        width: 100px;
+        height: 100px;
         margin: auto 15px;
       }
     }

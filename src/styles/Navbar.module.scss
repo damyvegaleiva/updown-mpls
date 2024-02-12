@@ -1,0 +1,121 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  padding: 10px 0;
+
+  img {
+    width: 65px;
+    padding-left: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  svg {
+    margin-right: 8px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .burger-btn {
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 2px;
+  }
+
+  .navbar-list {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    background: black;
+    list-style-type: none;
+    position: absolute;
+    top: 100%;
+    transition: transform 0.8s;
+    transform: translateX(-150%);
+  }
+
+  li {
+    text-align: center;
+    font-family: $fontTourney;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px map-get($map: $colorPalette, $key: "purple");
+    padding: 10px 0;
+    width: 99%;
+
+    &:not(:last-child) {
+      border-bottom: 2px solid rgba(255, 255, 255, 0.411);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .active {
+    transform: translateX(0%);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  nav {
+    transform: translateX(0%);
+    background: map-get($map: $colorPalette, $key: "lightBlack");
+
+    img {
+      display: none;
+    }
+
+    svg {
+      display: none;
+    }
+
+    .navbar-list {
+      width: 99%;
+      flex-flow: row nowrap;
+      gap: 35px;
+      max-width: 1250px;
+      margin: auto;
+      position: sticky;
+      top: 0;
+      background: map-get($map: $colorPalette, $key: "lightBlack");
+      transform: translateX(0%);
+
+      li {
+        border-bottom: none;
+        transition: box-shadow 0.5s ease-in-out, background 0.3s ease-in-out,
+          color 0.5s ease-in-out;
+        box-shadow: -2px -2px 0px map-get($map: $colorPalette, $key: "magenta"),
+          2px 2px 0px map-get($map: $colorPalette, $key: "neonCyan");
+        background: map-get($map: $colorPalette, $key: "lightBlack");
+
+        &:hover {
+          cursor: pointer;
+          background: map-get($map: $colorPalette, $key: "white");
+          color: map-get($map: $colorPalette, $key: "darkBlack");
+          box-shadow: -2px -2px 0px map-get($map: $colorPalette, $key:
+                  "neonCyan"),
+            2px 2px 0px map-get($map: $colorPalette, $key: "magenta");
+        }
+      }
+    }
+  }
+
+  .nav-bar__list-item--current {
+    background-color: map-get($map: $colorPalette, $key: "white");
+    color: map-get($map: $colorPalette, $key: "darkBlack");
+  }
+}
