@@ -1,11 +1,11 @@
 header {
-  background: url("./images/up-down-cover.jpg");
+  background: url("/images/up-down-cover.jpg");
   background-position: center;
   background-size: cover;
   height: 300px;
   width: 100%;
   border: 0.25rem solid map-get($map: $colorPalette, $key: "white");
-  border-radius: 20px;
+  border-radius: 50px;
   animation: flicker 3.5s infinite alternate;
   font-family: $fontTourney;
   text-transform: uppercase;

@@ -11,7 +11,11 @@ function App() {
 
         <Routes>
           <Route path="/" />
-          <Route path="/menu" element={<h1>HOLA</h1>} />
+          <Route path="/menu" />
+          <Route path="/events" />
+          <Route path="/gallery" />
+          <Route path="/contact" />
+          <Route path="/privacy-policy" />
         </Routes>
       </BrowserRouter>
     </div>

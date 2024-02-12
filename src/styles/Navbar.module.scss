@@ -4,22 +4,17 @@ nav {
   align-items: center;
   background: rgb(0, 0, 0);
   padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 
   img {
-    width: 65px;
+    width: 55px;
     padding-left: 10px;
-
-    &:hover {
-      cursor: pointer;
-    }
   }
 
   svg {
     margin-right: 8px;
-
-    &:hover {
-      cursor: pointer;
-    }
   }
 
   .burger-btn {
@@ -48,7 +43,6 @@ nav {
     font-family: $fontTourney;
     font-size: 1.5rem;
     text-shadow: 2px 2px map-get($map: $colorPalette, $key: "purple");
-    padding: 10px 0;
     width: 99%;
 
     &:not(:last-child) {
@@ -58,10 +52,8 @@ nav {
     a {
       text-decoration: none;
       color: inherit;
-
-      &:hover {
-        cursor: pointer;
-      }
+      display: block;
+      padding: 10px 0;
     }
   }
 
@@ -72,7 +64,6 @@ nav {
 
 @media screen and (min-width: 992px) {
   nav {
-    transform: translateX(0%);
     background: map-get($map: $colorPalette, $key: "lightBlack");
 
     img {
@@ -84,15 +75,14 @@ nav {
     }
 
     .navbar-list {
+      transform: translateX(0%);
       width: 99%;
       flex-flow: row nowrap;
       gap: 35px;
       max-width: 1250px;
       margin: auto;
       position: sticky;
-      top: 0;
       background: map-get($map: $colorPalette, $key: "lightBlack");
-      transform: translateX(0%);
 
       li {
         border-bottom: none;
@@ -102,8 +92,12 @@ nav {
           2px 2px 0px map-get($map: $colorPalette, $key: "neonCyan");
         background: map-get($map: $colorPalette, $key: "lightBlack");
 
+        .active {
+          background: map-get($map: $colorPalette, $key: "white");
+          color: map-get($map: $colorPalette, $key: "darkBlack");
+        }
+
         &:hover {
-          cursor: pointer;
           background: map-get($map: $colorPalette, $key: "white");
           color: map-get($map: $colorPalette, $key: "darkBlack");
           box-shadow: -2px -2px 0px map-get($map: $colorPalette, $key:
@@ -112,10 +106,5 @@ nav {
         }
       }
     }
-  }
-
-  .nav-bar__list-item--current {
-    background-color: map-get($map: $colorPalette, $key: "white");
-    color: map-get($map: $colorPalette, $key: "darkBlack");
   }
 }

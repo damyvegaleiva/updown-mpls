@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GrClose } from "react-icons/gr";
 
@@ -25,40 +25,40 @@ const NavBarContainer = () => {
   };
 
   return (
-    <nav className="navbar-container">
+    <nav>
       <img src="./images/up-down-logo.png" onClick={() => navigate("/")} />
 
       {navBarIcon(isClicked)}
 
       <ul className={"navbar-list " + (isClicked && "active")}>
         <li>
-          <Link to={"/"} onClick={handleClick}>
+          <NavLink to={"/"} onClick={handleClick}>
             HOME
-          </Link>
+          </NavLink>
         </li>
 
         <li>
-          <Link to={"/menu"} onClick={handleClick}>
+          <NavLink to={"/menu"} onClick={handleClick}>
             MENU
-          </Link>
+          </NavLink>
         </li>
 
         <li>
-          <Link to={"/events"} onClick={handleClick}>
+          <NavLink to={"/events"} onClick={handleClick}>
             EVENTS
-          </Link>
+          </NavLink>
         </li>
 
         <li>
-          <Link to={"/gallery"} onClick={handleClick}>
+          <NavLink to={"/gallery"} onClick={handleClick}>
             GALLERY
-          </Link>
+          </NavLink>
         </li>
 
         <li>
-          <Link to={"/contact"} onClick={handleClick}>
+          <NavLink to={"/contact"} onClick={handleClick}>
             CONTACT
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>
