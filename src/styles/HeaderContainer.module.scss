@@ -1,0 +1,135 @@
+header {
+  background: url("./images/up-down-cover.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  border: 0.25rem solid map-get($map: $colorPalette, $key: "white");
+  border-radius: 20px;
+  animation: flicker 3.5s infinite alternate;
+  font-family: $fontTourney;
+  text-transform: uppercase;
+
+  .header__top-container {
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+
+  .header__updown {
+    font-size: 4.5rem;
+  }
+
+  .header__location {
+    font-size: 1.6rem;
+  }
+
+  .header__updown,
+  .header__location {
+    color: #0398b3;
+    margin: 0;
+  }
+
+  .header__bottom-container {
+    display: none;
+  }
+}
+
+// ----------------------------------BREAKPOINT
+@media screen and (min-width: 768px) {
+  header {
+    height: 350px;
+
+    .header__updown {
+      font-size: 6rem;
+    }
+
+    .header__location {
+      font-size: $textMedium;
+    }
+  }
+}
+
+// ----------------------------------BREAKPOINT
+@media screen and (min-width: 1024px) {
+  header {
+    @include display-f(column, nowrap, center, center);
+    height: 100vh;
+
+    .header__updown {
+      font-size: 20rem;
+    }
+
+    .header__location {
+      font-size: $textLarge;
+    }
+
+    .header__bottom-container {
+      display: block;
+
+      .header__insert-coin {
+        @include display-f(row, wrap, center, center);
+        font-size: $textMedium;
+        text-shadow: none;
+        -webkit-text-stroke: 1px map-get($map: $colorPalette, $key: "darkBlack");
+        -webkit-text-fill-color: rgb(255, 255, 0);
+        filter: brightness(125%);
+        animation: insert-coin 3s linear infinite;
+      }
+
+      .header__img--size {
+        width: 115px;
+        height: 115px;
+        margin: auto 15px;
+      }
+    }
+  }
+}
+
+// ----------------------------------ANIMATIONS
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  99%,
+  100% {
+    text-shadow: -0.1rem -0.1rem 1rem map-get($map: $colorPalette, $key: "white"),
+      0.2rem 0.2rem 1rem map-get($map: $colorPalette, $key: "white"),
+      0 0 2rem map-get($map: $colorPalette, $key: "neonCyan"),
+      0 0 4rem map-get($map: $colorPalette, $key: "neonCyan"),
+      0 0 6rem map-get($map: $colorPalette, $key: "neonCyan"),
+      0 0 8rem map-get($map: $colorPalette, $key: "neonCyan"),
+      0 0 10rem map-get($map: $colorPalette, $key: "neonCyan");
+
+    box-shadow: 0 0 0.5rem map-get($map: $colorPalette, $key: "white"),
+      inset 0 0 0.5rem map-get($map: $colorPalette, $key: "white"),
+      0 0 2rem map-get($map: $colorPalette, $key: "magenta"),
+      inset 0 0 2rem map-get($map: $colorPalette, $key: "magenta"),
+      0 0 4rem map-get($map: $colorPalette, $key: "magenta"),
+      inset 0 0 4rem map-get($map: $colorPalette, $key: "magenta");
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+    box-shadow: none;
+  }
+}
+
+@keyframes insert-coin {
+  25%,
+  75% {
+    opacity: 0;
+  }
+  50%,
+  100% {
+    opacity: 1;
+  }
+}
