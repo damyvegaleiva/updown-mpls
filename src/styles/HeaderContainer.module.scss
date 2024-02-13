@@ -4,7 +4,7 @@ header {
   background-size: cover;
   height: 300px;
   width: 100%;
-  border: 0.25rem solid map-get($map: $colorPalette, $key: "white");
+  border: 0.25rem solid map-get($map: $colorMap, $key: "white");
   border-radius: 50px;
   animation: flicker 3.5s infinite alternate;
   font-family: $fontTourney;
@@ -19,7 +19,7 @@ header {
   }
 
   .header__updown {
-    font-size: 4.5rem;
+    font-size: $text4-5;
   }
 
   .header__location {
@@ -37,22 +37,22 @@ header {
   }
 }
 
-// ----------------------------------BREAKPOINT
+// ---------------------------------- BREAKPOINT ---------------------------------- //
 @media screen and (min-width: 768px) {
   header {
     height: 350px;
 
     .header__updown {
-      font-size: 6rem;
+      font-size: $text6;
     }
 
     .header__location {
-      font-size: $textMedium;
+      font-size: $text3;
     }
   }
 }
 
-// ----------------------------------BREAKPOINT
+// ---------------------------------- BREAKPOINT ---------------------------------- //
 @media screen and (min-width: 992px) {
   header {
     @include display-f(column, nowrap, center, center);
@@ -64,32 +64,31 @@ header {
     }
 
     .header__location {
-      font-size: $textMedium;
+      font-size: $text3;
     }
 
     .header__bottom-container {
       display: block;
 
+      img {
+        width: 75px;
+        margin: 0 20px;
+      }
+
       .header__insert-coin {
         @include display-f(row, wrap, center, center);
-        font-size: 2rem;
+        font-size: $text2;
         text-shadow: none;
-        -webkit-text-stroke: 1px map-get($map: $colorPalette, $key: "darkBlack");
+        -webkit-text-stroke: 1px map-get($map: $colorMap, $key: "darkBlack");
         -webkit-text-fill-color: rgb(255, 255, 0);
         filter: brightness(125%);
         animation: insert-coin 3s linear infinite;
-      }
-
-      .header__img--size {
-        width: 100px;
-        height: 100px;
-        margin: auto 15px;
       }
     }
   }
 }
 
-// ----------------------------------ANIMATIONS
+// ---------------------------------- ANIMATIONS ---------------------------------- //
 @keyframes flicker {
   0%,
   19%,
@@ -100,20 +99,20 @@ header {
   56%,
   99%,
   100% {
-    text-shadow: -0.1rem -0.1rem 1rem map-get($map: $colorPalette, $key: "white"),
-      0.2rem 0.2rem 1rem map-get($map: $colorPalette, $key: "white"),
-      0 0 2rem map-get($map: $colorPalette, $key: "neonCyan"),
-      0 0 4rem map-get($map: $colorPalette, $key: "neonCyan"),
-      0 0 6rem map-get($map: $colorPalette, $key: "neonCyan"),
-      0 0 8rem map-get($map: $colorPalette, $key: "neonCyan"),
-      0 0 10rem map-get($map: $colorPalette, $key: "neonCyan");
+    text-shadow: -0.1rem -0.1rem 1rem map-get($map: $colorMap, $key: "white"),
+      0.2rem 0.2rem 1rem map-get($map: $colorMap, $key: "white"),
+      0 0 2rem map-get($map: $colorMap, $key: "neonCyan"),
+      0 0 4rem map-get($map: $colorMap, $key: "neonCyan"),
+      0 0 6rem map-get($map: $colorMap, $key: "neonCyan"),
+      0 0 8rem map-get($map: $colorMap, $key: "neonCyan"),
+      0 0 10rem map-get($map: $colorMap, $key: "neonCyan");
 
-    box-shadow: 0 0 0.5rem map-get($map: $colorPalette, $key: "white"),
-      inset 0 0 0.5rem map-get($map: $colorPalette, $key: "white"),
-      0 0 2rem map-get($map: $colorPalette, $key: "magenta"),
-      inset 0 0 2rem map-get($map: $colorPalette, $key: "magenta"),
-      0 0 4rem map-get($map: $colorPalette, $key: "magenta"),
-      inset 0 0 4rem map-get($map: $colorPalette, $key: "magenta");
+    box-shadow: 0 0 0.5rem map-get($map: $colorMap, $key: "white"),
+      inset 0 0 0.5rem map-get($map: $colorMap, $key: "white"),
+      0 0 2rem map-get($map: $colorMap, $key: "magenta"),
+      inset 0 0 2rem map-get($map: $colorMap, $key: "magenta"),
+      0 0 4rem map-get($map: $colorMap, $key: "magenta"),
+      inset 0 0 4rem map-get($map: $colorMap, $key: "magenta");
   }
 
   20%,

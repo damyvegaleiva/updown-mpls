@@ -6,7 +6,6 @@ nav {
   padding: 10px 0;
   position: sticky;
   top: 0;
-  // z-index: 1;
 
   img {
     width: 55px;
@@ -41,8 +40,8 @@ nav {
   li {
     text-align: center;
     font-family: $fontTourney;
-    font-size: 1.5rem;
-    text-shadow: 2px 2px map-get($map: $colorPalette, $key: "purple");
+    font-size: $text1-5;
+    text-shadow: 2px 2px map-get($map: $colorMap, $key: "purple");
     width: 99%;
 
     &:not(:last-child) {
@@ -62,10 +61,10 @@ nav {
   }
 }
 
-// ----------------------------------BREAKPOINT
+// ---------------------------------- BREAKPOINT ---------------------------------- //
 @media screen and (min-width: 992px) {
   nav {
-    background: map-get($map: $colorPalette, $key: "lightBlack");
+    background: map-get($map: $colorMap, $key: "lightBlack");
 
     img {
       display: none;
@@ -83,27 +82,26 @@ nav {
       max-width: 1250px;
       margin: auto;
       position: sticky;
-      background: map-get($map: $colorPalette, $key: "lightBlack");
+      background: map-get($map: $colorMap, $key: "lightBlack");
 
       li {
         border-bottom: none;
         transition: box-shadow 0.5s ease-in-out, background 0.3s ease-in-out,
           color 0.5s ease-in-out;
-        box-shadow: -2px -2px 0px map-get($map: $colorPalette, $key: "magenta"),
-          2px 2px 0px map-get($map: $colorPalette, $key: "neonCyan");
-        background: map-get($map: $colorPalette, $key: "lightBlack");
+        box-shadow: -2px -2px 0px map-get($map: $colorMap, $key: "magenta"),
+          2px 2px 0px map-get($map: $colorMap, $key: "neonCyan");
+        background: map-get($map: $colorMap, $key: "lightBlack");
 
         .active {
-          background: map-get($map: $colorPalette, $key: "white");
-          color: map-get($map: $colorPalette, $key: "darkBlack");
+          background: map-get($map: $colorMap, $key: "white");
+          color: map-get($map: $colorMap, $key: "darkBlack");
         }
 
         &:hover {
-          background: map-get($map: $colorPalette, $key: "white");
-          color: map-get($map: $colorPalette, $key: "darkBlack");
-          box-shadow: -2px -2px 0px map-get($map: $colorPalette, $key:
-                  "neonCyan"),
-            2px 2px 0px map-get($map: $colorPalette, $key: "magenta");
+          background: map-get($map: $colorMap, $key: "white");
+          color: map-get($map: $colorMap, $key: "darkBlack");
+          box-shadow: -2px -2px 0px map-get($map: $colorMap, $key: "neonCyan"),
+            2px 2px 0px map-get($map: $colorMap, $key: "magenta");
         }
       }
     }

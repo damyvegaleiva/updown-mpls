@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeaderContainer from "./containers/HeaderContainer";
 import NavBarContainer from "./containers/NavBarContainer";
+import FooterContainer from "./containers/FooterContainer";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
           <Route path="/contact" />
           <Route path="/privacy-policy" />
         </Routes>
+
+        <FooterContainer />
       </BrowserRouter>
     </div>
   );
