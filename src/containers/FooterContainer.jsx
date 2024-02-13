@@ -55,8 +55,8 @@ const FooterContainer = () => {
 
         <div className="footer__contact">
           <h3 className="footer__headings">Contact</h3>
-          <p> Phone: 612-823-3487</p>
-          <p> Have a question? </p>
+          <p>Phone: 612-823-3487</p>
+          <p>Have a question? </p>
           <p>Shoot us an email </p>
         </div>
 
