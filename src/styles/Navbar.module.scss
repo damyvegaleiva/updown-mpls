@@ -6,7 +6,7 @@ nav {
   padding: 10px 0;
   position: sticky;
   top: 0;
-  z-index: 1;
+  // z-index: 1;
 
   img {
     width: 55px;
@@ -33,8 +33,8 @@ nav {
     background: black;
     list-style-type: none;
     position: absolute;
-    top: 100%;
-    transition: transform 0.8s;
+    top: 99%;
+    transition: transform 0.8s ease-in-out;
     transform: translateX(-150%);
   }
 
@@ -57,11 +57,12 @@ nav {
     }
   }
 
-  .active {
+  .navbar-list.active {
     transform: translateX(0%);
   }
 }
 
+// ----------------------------------BREAKPOINT
 @media screen and (min-width: 992px) {
   nav {
     background: map-get($map: $colorPalette, $key: "lightBlack");

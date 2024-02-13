@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeaderContainer from "./containers/HeaderContainer";
-import NavBarContainer from "./components/NavBarContainer";
+import NavBarContainer from "./containers/NavBarContainer";
 
 function App() {
   return (

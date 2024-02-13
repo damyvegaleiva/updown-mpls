@@ -15,8 +15,7 @@ const HeaderContainer = () => {
           <a href="#home">
             <img
               src="../images/up-down-logo.png"
-              className="header__img--size"
-              alt="Up-Down logo"
+              alt="Up-Down logo: A circle with an angle up and an angle down inside of the circle."
             />
           </a>
           Coin !
