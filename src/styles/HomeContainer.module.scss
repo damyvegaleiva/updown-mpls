@@ -12,6 +12,8 @@
   border: 1.5px solid #a7a7a7;
   background: map-get($map: $colorMap, $key: "lightBlack");
   box-shadow: -1px 1px 15px #a7a7a7;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .article-one-subhead {
