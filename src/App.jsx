@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeaderContainer from "./containers/HeaderContainer";
 import NavBarContainer from "./containers/NavBarContainer";
 import FooterContainer from "./containers/FooterContainer";
+import HomeContainer from "./containers/HomeContainer";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <NavBarContainer />
 
         <Routes>
-          <Route path="/" />
+          <Route path="/" element={<HomeContainer />} />
           <Route path="/menu" />
           <Route path="/events" />
           <Route path="/gallery" />

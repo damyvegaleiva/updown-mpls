@@ -1,0 +1,200 @@
+.article-one {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 95%;
+  max-width: 700px;
+  margin: 150px auto;
+  padding: 75px 25px;
+  border-radius: 20px;
+  border: 1.5px solid #a7a7a7;
+  background: map-get($map: $colorMap, $key: "lightBlack");
+  box-shadow: -1px 1px 15px #a7a7a7;
+}
+
+.article-one-subhead {
+  width: 100%;
+  padding: 25px 20px;
+  font-size: $text2;
+  text-align: center;
+  color: map-get($map: $colorMap, $key: "white");
+  border-right: 3px solid map-get($map: $colorMap, $key: "neonCyan");
+  border-left: 3px solid map-get($map: $colorMap, $key: "magenta");
+  text-shadow: 5px 2px map-get($map: $colorMap, $key: "purple");
+  order: 1;
+
+  .span-subhead {
+    color: #32d8e0;
+    text-decoration: underline;
+  }
+}
+
+.aside-one {
+  height: 100%;
+  text-align: center;
+  order: 2;
+
+  img {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .aside-one__parrafo {
+    font-size: $text1-5;
+    padding: 20px 10px;
+    position: absolute;
+    bottom: 8%;
+    background: map-get($map: $colorMap, $key: "lightBlack");
+    text-shadow: 5px 2px map-get($map: $colorMap, $key: "magenta");
+    z-index: 1;
+  }
+
+  .aside-one__photo-by {
+    width: 100%;
+    padding: 3px 0;
+    font-size: $text0-75;
+    position: absolute;
+    bottom: 3%;
+    background: map-get($map: $colorMap, $key: "darkBlack");
+    text-shadow: 2px 1px map-get($map: $colorMap, $key: "magenta");
+    z-index: 1;
+  }
+}
+
+[class*="parrafo-"] {
+  svg {
+    font-size: $text3;
+    z-index: 1;
+  }
+
+  p {
+    margin: auto;
+    font-size: $text1;
+    line-height: 1.75rem;
+    color: map-get($map: $colorMap, $key: "text");
+    text-align: center;
+    text-shadow: 1px 1px map-get($map: $colorMap, $key: "purple");
+    z-index: 1;
+  }
+}
+
+.parrafo-one {
+  order: 3;
+}
+
+.parrafo-two {
+  order: 4;
+}
+
+.parrafo-three {
+  order: 5;
+}
+
+.parrafo-four {
+  order: 6;
+}
+
+.parrafo-five {
+  order: 7;
+}
+
+.parrafo-six {
+  order: 8;
+}
+
+.box {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  height: 100%;
+  padding: 25px;
+  border-radius: 15px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 3.5px;
+    border-radius: 15px;
+    background: rgb(5, 5, 5);
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    width: 950px;
+    height: 375%;
+    position: absolute;
+    background: linear-gradient(
+      map-get($map: $colorMap, $key: "sliderCyan"),
+      map-get($map: $colorMap, $key: "magenta")
+    );
+    animation: animate 5s linear infinite;
+  }
+}
+
+// ---------------------------------- BREAKPOINT ---------------------------------- //
+@media screen and (min-width: 768px) {
+  .article-one-subhead {
+    font-size: $text3;
+  }
+}
+
+// ---------------------------------- BREAKPOINT ---------------------------------- //
+@media screen and (min-width: 1024px) {
+  .article-one {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "subhead aside"
+      "pf1 pf2";
+    align-content: center;
+    max-width: 1200px;
+  }
+
+  .article-one-subhead {
+    grid-area: subhead;
+    margin: auto;
+    font-size: $text3;
+    text-align: center;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    line-height: 5rem;
+  }
+
+  .aside-one {
+    grid-area: aside;
+    margin: auto;
+
+    .aside-one__parrafo {
+      font-size: $text1-25;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .article-one {
+    grid-template-areas:
+      "subhead aside"
+      "pf1 aside";
+
+    .article-one-subhead {
+      font-size: $text4-25;
+      padding: 0;
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

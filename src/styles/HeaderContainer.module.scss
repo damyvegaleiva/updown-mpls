@@ -5,7 +5,7 @@ header {
   height: 300px;
   width: 100%;
   border: 0.25rem solid map-get($map: $colorMap, $key: "white");
-  border-radius: 50px;
+  border-radius: 20px;
   animation: flicker 3.5s infinite alternate;
   font-family: $fontTourney;
   text-transform: uppercase;
