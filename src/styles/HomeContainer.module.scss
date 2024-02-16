@@ -6,12 +6,9 @@
   gap: 3rem;
   width: 95%;
   max-width: 700px;
-  margin: 150px auto;
+  margin: auto;
   padding: 75px 25px;
-  border-radius: 20px;
-  border: 1.5px solid #a7a7a7;
   background: map-get($map: $colorMap, $key: "lightBlack");
-  box-shadow: -1px 1px 15px #a7a7a7;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -40,11 +37,12 @@
 
   img {
     width: 100%;
+    max-width: 500px;
     border-radius: 20px;
   }
 
   .aside-one__parrafo {
-    font-size: $text1-5;
+    font-size: $text1-25;
     padding: 20px 10px;
     position: absolute;
     bottom: 8%;
@@ -187,6 +185,12 @@
     .article-one-subhead {
       font-size: $text4-25;
       padding: 0;
+    }
+
+    .aside-one {
+      img {
+        max-width: none;
+      }
     }
   }
 }

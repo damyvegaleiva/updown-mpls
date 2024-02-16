@@ -3,6 +3,7 @@ import ArticleOne from "../components/ArtitcleOne";
 const HomeContainer = () => {
   return (
     <main>
+      <h1 className="headline-pages">WELCOME</h1>
       <section>
         <ArticleOne />
       </section>

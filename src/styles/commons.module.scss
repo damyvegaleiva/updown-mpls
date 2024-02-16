@@ -1,0 +1,28 @@
+.headline-pages {
+  font-size: $text2-75;
+  text-shadow: 5px 2px map-get($map: $colorMap, $key: "purple");
+  color: map-get($map: $colorMap, $key: "white");
+  border-left: 3px solid map-get($map: $colorMap, $key: "magenta");
+  border-right: 3px solid map-get($map: $colorMap, $key: "neonCyan");
+  background: map-get($map: $colorMap, $key: "lightBlack");
+  text-align: center;
+  padding: 5px 0;
+  text-decoration: underline;
+  margin-bottom: 75px;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.article-one {
+  border-radius: 20px;
+  border: 1.5px solid map-get($map: $colorMap, $key: "borderContainer");
+  box-shadow: -1px 1px 15px map-get($map: $colorMap, $key: "borderContainer");
+}
+
+// ---------------------------------- BREAKPOINT ---------------------------------- //
+@media screen and (min-width: 768px) {
+  .headline-pages {
+    font-size: $text4;
+  }
+}
