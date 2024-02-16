@@ -1,4 +1,4 @@
-import ArticleOne from "../components/ArtitcleOne";
+import ArticleOne from "../components/ArticleOne";
 
 const HomeContainer = () => {
   return (
