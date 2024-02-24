@@ -1,12 +1,12 @@
-@import "./styles/Mixins.module.scss";
-@import "./styles/Fonts.module.scss";
-@import "./styles/Variables.module.scss";
-@import "./styles/Commons.module.scss";
-@import "./styles/HeaderContainer.module.scss";
-@import "./styles/NavBarContainer.module.scss";
-@import "./styles/FooterContainer.module.scss";
-@import "./styles/ArticleOne.module.scss";
-@import "./styles/ArticleTwo.module.scss";
+@import "./styles/_Fonts.scss";
+@import "./styles/_Mixins.scss";
+@import "./styles/_Variables.scss";
+@import "./styles/_Commons.scss";
+@import "./styles/_HeaderContainer.scss";
+@import "./styles/_NavBarContainer.scss";
+@import "./styles/_ArticleOne.scss";
+@import "./styles/_ArticleTwo.scss";
+@import "./styles/_FooterContainer.scss";
 
 *,
 *:before,
