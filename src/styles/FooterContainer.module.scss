@@ -4,7 +4,7 @@ footer {
   text-shadow: 1px 1px map-get($map: $colorMap, $key: "purple");
 }
 
-.footer__container {
+.footer__top {
   width: 100%;
   display: flex;
   flex-flow: column wrap;
@@ -96,7 +96,7 @@ footer {
 
 // ---------------------------------- BREAKPOINT ---------------------------------- //
 @media screen and (min-width: 768px) {
-  .footer__container {
+  .footer__top {
     flex-flow: row wrap;
 
     .footer__hours {
@@ -115,7 +115,7 @@ footer {
 
 // ---------------------------------- BREAKPOINT ---------------------------------- //
 @media screen and (min-width: 1024px) {
-  .footer__container {
+  .footer__top {
     .footer__hours {
       width: 30%;
     }
@@ -141,7 +141,7 @@ footer {
 
 // ---------------------------------- BREAKPOINT ---------------------------------- //
 @media screen and (min-width: 1705px) {
-  .footer__container {
+  .footer__top {
     @include display-f(row, wrap, space-between, flex-start);
     padding: 25px 0 0;
     max-width: 2500px;
