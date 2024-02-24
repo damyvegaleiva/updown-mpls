@@ -1,0 +1,173 @@
+.article-two {
+  margin: 0 auto 150px;
+  width: 95%;
+  max-width: 1920px;
+  padding: 0 0 15px;
+
+  &:before {
+    background-image: url("/images/slider-background.jpg");
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    position: absolute;
+    inset: 0;
+  }
+
+  .sub-headline {
+    font-size: $text2;
+    text-shadow: 5px 2px map-get($map: $colorMap, $key: "purple");
+    border-left: 5px solid map-get($map: $colorMap, $key: "magenta");
+    border-right: 5px solid map-get($map: $colorMap, $key: "cyan");
+    background: map-get($map: $colorMap, $key: "lightBlack");
+    padding: 25px;
+    margin: auto;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+  .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    width: 100%;
+    margin: auto;
+
+    .carousel__slidershow {
+      width: 90%;
+      max-width: 400px;
+      aspect-ratio: 1 / 1;
+      margin: auto;
+      border-radius: 16px;
+      overflow: hidden;
+
+      .slides {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+    }
+
+    .next-button {
+      top: 50%;
+      right: 5px;
+    }
+
+    .prev-button {
+      top: 50%;
+      left: 5px;
+    }
+
+    .next-button,
+    .prev-button {
+      position: absolute;
+      background: none;
+      border: none;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      background: rgb(80, 80, 80);
+      backdrop-filter: blur(8px);
+      opacity: 0.75;
+      transition: opacity 0.2s ease-in-out;
+      z-index: 1;
+
+      svg {
+        font-size: $text2-75;
+        color: rgb(255, 255, 255);
+      }
+
+      &:hover {
+        cursor: pointer;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// ---------------------------------- BREAKPOINT ---------------------------------- //
+
+@media screen and (min-width: 450px) {
+  .article-two {
+    .sub-headline {
+      font-size: $text3;
+    }
+  }
+}
+
+// -------------------------  --------- BREAKPOINT ---------------------------------- //
+
+@media screen and (min-width: 768px) {
+  .article-two {
+    padding: 40px 0;
+
+    .sub-headline {
+      border-radius: 0;
+    }
+    .carousel-container {
+      .next-button {
+        top: 50%;
+        right: 100px;
+      }
+
+      .prev-button {
+        top: 50%;
+        left: 100px;
+      }
+
+      .next-button,
+      .prev-button {
+        svg {
+          font-size: $text3;
+        }
+      }
+    }
+  }
+}
+
+// ---------------------------------- BREAKPOINT ---------------------------------- //
+
+@media screen and (min-width: 1024px) {
+  .article-two {
+    .sub-headline {
+      font-size: $text4;
+    }
+
+    .carousel-container {
+      .next-button {
+        top: 50%;
+        right: 150px;
+      }
+
+      .prev-button {
+        top: 50%;
+        left: 150px;
+      }
+    }
+  }
+}
+
+// ---------------------------------- BREAKPOINT ---------------------------------- //
+
+@media screen and (min-width: 1400px) {
+  .article-two {
+    .sub-headline {
+      font-size: $text5;
+    }
+    .carousel-container {
+      .next-button {
+        top: 50%;
+        right: 600px;
+      }
+
+      .prev-button {
+        top: 50%;
+        left: 600px;
+      }
+    }
+  }
+}

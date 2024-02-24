@@ -6,7 +6,7 @@
   gap: 3rem;
   width: 95%;
   max-width: 700px;
-  margin: auto;
+  margin: auto auto 100px;
   padding: 75px 25px;
   background: map-get($map: $colorMap, $key: "lightBlack");
   backdrop-filter: blur(8px);
@@ -133,7 +133,7 @@
       map-get($map: $colorMap, $key: "sliderCyan"),
       map-get($map: $colorMap, $key: "magenta")
     );
-    animation: animate 5s linear infinite;
+    animation: animate 5s ease-in-out infinite;
   }
 }
 

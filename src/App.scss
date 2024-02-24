@@ -1,19 +1,20 @@
-@import "./styles/fonts.module.scss";
-@import "./styles/mixins.module.scss";
-@import "./styles/variables.module.scss";
-@import "./styles/commons.module.scss";
+@import "./styles/Fonts.module.scss";
+@import "./styles/Mixins.module.scss";
+@import "./styles/Variables.module.scss";
+@import "./styles/Commons.module.scss";
 @import "./styles/HeaderContainer.module.scss";
 @import "./styles/NavBarContainer.module.scss";
 @import "./styles/FooterContainer.scss";
-@import "./styles/HomeContainer.module.scss";
+@import "./styles/ArticleOne.module.scss";
+@import "./styles/ArticleTwo.module.scss";
 
 *,
 *:before,
 *:after {
+  position: relative;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  position: relative;
   min-width: 0;
 }
 
