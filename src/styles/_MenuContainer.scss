@@ -1,0 +1,45 @@
+.menus-container {
+  width: 90%;
+  max-width: 1920px;
+  margin: auto;
+  text-align: center;
+
+  img {
+    width: 80%;
+    margin: 25px;
+    border: 3px solid map-get($map: $colorMap, $key: "borderWheat");
+    max-width: 500px;
+  }
+
+  .menu__beer-container {
+    background: url("../images/beer-taps.jpg");
+    background-size: cover;
+    background-position-x: 30%;
+  }
+
+  .menu__pizza-container {
+    background: url("../images/pizza.jpg");
+    background-size: cover;
+  }
+
+  .menu__beer-container,
+  .menu__pizza-container {
+    border-radius: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+// ---------------------------------- BREAKPOINT ---------------------------------- //
+
+@media screen and (min-width: 1024px) {
+  .menus-container {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+
+    img {
+      max-width: 700px;
+    }
+  }
+}

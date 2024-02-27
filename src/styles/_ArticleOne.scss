@@ -31,13 +31,13 @@
 }
 
 .aside-one {
-  height: 100%;
   text-align: center;
   order: 2;
 
   img {
     width: 100%;
     max-width: 500px;
+    aspect-ratio: 2/3;
     border-radius: 20px;
   }
 

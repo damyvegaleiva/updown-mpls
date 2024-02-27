@@ -3,6 +3,7 @@ import HeaderContainer from "./containers/HeaderContainer";
 import NavBarContainer from "./containers/NavBarContainer";
 import FooterContainer from "./containers/FooterContainer";
 import HomeContainer from "./containers/HomeContainer";
+import MenuContainer from "./containers/MenuContainer";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<HomeContainer />} />
-          <Route path="/menu" />
+          <Route path="/menu" element={<MenuContainer />} />
           <Route path="/events" />
           <Route path="/gallery" />
           <Route path="/contact" />
