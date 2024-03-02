@@ -4,6 +4,7 @@ import NavBarContainer from "./containers/NavBarContainer";
 import FooterContainer from "./containers/FooterContainer";
 import HomeContainer from "./containers/HomeContainer";
 import MenuContainer from "./containers/MenuContainer";
+import EventsContainer from "./containers/EventsContainer";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeContainer />} />
           <Route path="/menu" element={<MenuContainer />} />
-          <Route path="/events" />
+          <Route path="/events" element={<EventsContainer />} />
           <Route path="/gallery" />
           <Route path="/contact" />
           <Route path="/privacy-policy" />

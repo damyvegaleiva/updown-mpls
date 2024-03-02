@@ -1,0 +1,37 @@
+.calendar__container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+  background: url("../images/events.jpg");
+  background-size: cover;
+  background-position-y: 45%;
+  border-radius: 0px;
+}
+
+.calendar__calendar-iframe {
+  margin-bottom: 100px;
+  width: 90%;
+  height: 350px;
+}
+
+// ---------------------------------- BREAKPOINT ---------------------------------- //
+
+@media screen and (min-width: 768px) {
+  .calendar__calendar-iframe {
+    height: 600px;
+  }
+}
+
+// ---------------------------------- BREAKPOINT ---------------------------------- //
+
+@media screen and (min-width: 1024px) {
+  .calendar__calendar-iframe {
+    max-width: 1000px;
+  }
+
+  .calendar__container {
+    height: 85%;
+  }
+}

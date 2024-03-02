@@ -1,4 +1,5 @@
 .headline-pages {
+  width: 100%;
   font-size: $text2-75;
   text-shadow: 5px 2px map-get($map: $colorMap, $key: "purple");
   color: map-get($map: $colorMap, $key: "white");
@@ -15,7 +16,8 @@
 }
 
 .article-one,
-.article-two {
+.article-two,
+.calendar__container {
   border-radius: 20px;
   border: 1.5px solid map-get($map: $colorMap, $key: "borderContainer");
   box-shadow: -1px 1px 15px map-get($map: $colorMap, $key: "borderContainer");
@@ -25,8 +27,8 @@
   width: 100%;
   font-size: $text2;
   text-shadow: 5px 2px map-get($map: $colorMap, $key: "purple");
-  border-left: 5px solid map-get($map: $colorMap, $key: "magenta");
-  border-right: 5px solid map-get($map: $colorMap, $key: "cyan");
+  border-left: 3px solid map-get($map: $colorMap, $key: "magenta");
+  border-right: 3px solid map-get($map: $colorMap, $key: "cyan");
   background: map-get($map: $colorMap, $key: "lightBlack");
   padding: 25px;
   margin: auto;

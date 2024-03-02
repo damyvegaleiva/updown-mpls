@@ -2,6 +2,7 @@ footer {
   background: map-get($map: $colorMap, $key: "darkBlack");
   border-top: solid 3px map-get($map: $colorMap, $key: "darkBlack");
   text-shadow: 1px 1px map-get($map: $colorMap, $key: "purple");
+  padding-top: 50px;
 }
 
 .footer__top {
@@ -136,6 +137,14 @@ footer {
     iframe {
       margin: auto;
     }
+  }
+}
+
+// ---------------------------------- BREAKPOINT ---------------------------------- //
+
+@media screen and (min-width: 1400px) {
+  footer {
+    padding-top: 25px;
   }
 }
 
