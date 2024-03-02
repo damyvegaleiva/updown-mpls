@@ -133,7 +133,7 @@
       map-get($map: $colorMap, $key: "sliderCyan"),
       map-get($map: $colorMap, $key: "magenta")
     );
-    animation: animate 5s ease-in-out infinite;
+    animation: animate 3s ease-in-out infinite;
   }
 }
 

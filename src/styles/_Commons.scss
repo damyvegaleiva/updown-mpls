@@ -17,7 +17,10 @@
 
 .article-one,
 .article-two,
-.calendar__container {
+.menu__beer-container,
+.menu__pizza-container,
+.calendar__container,
+.gallery {
   border-radius: 20px;
   border: 1.5px solid map-get($map: $colorMap, $key: "borderContainer");
   box-shadow: -1px 1px 15px map-get($map: $colorMap, $key: "borderContainer");
@@ -54,6 +57,6 @@
 
 @media screen and (min-width: 1024px) {
   .headline-pages {
-    font-size: $text6;
+    font-size: $text4-5;
   }
 }

@@ -5,6 +5,7 @@ import FooterContainer from "./containers/FooterContainer";
 import HomeContainer from "./containers/HomeContainer";
 import MenuContainer from "./containers/MenuContainer";
 import EventsContainer from "./containers/EventsContainer";
+import GalleryContainer from "./containers/GalleryContainer";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path="/" element={<HomeContainer />} />
           <Route path="/menu" element={<MenuContainer />} />
           <Route path="/events" element={<EventsContainer />} />
-          <Route path="/gallery" />
+          <Route path="/gallery" element={<GalleryContainer />} />
           <Route path="/contact" />
           <Route path="/privacy-policy" />
         </Routes>
