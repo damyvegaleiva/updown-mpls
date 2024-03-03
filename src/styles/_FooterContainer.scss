@@ -3,6 +3,7 @@ footer {
   border-top: solid 3px map-get($map: $colorMap, $key: "darkBlack");
   text-shadow: 1px 1px map-get($map: $colorMap, $key: "purple");
   padding-top: 50px;
+  margin-top: 100px;
 }
 
 .footer__top {

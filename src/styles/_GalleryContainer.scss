@@ -1,10 +1,9 @@
 .gallery-container {
   width: 100%;
+  padding: 100px 0;
   background: url("../images/arcades.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 100px 0;
-  margin-bottom: 100px;
 
   .gallery {
     width: 90%;
@@ -43,7 +42,7 @@
   }
 }
 
-// -------------------------  --------- BREAKPOINT ---------------------------------- //
+// ---------------------------------- BREAKPOINT ---------------------------------- //
 
 @media screen and (min-width: 768px) {
   .gallery-container {
