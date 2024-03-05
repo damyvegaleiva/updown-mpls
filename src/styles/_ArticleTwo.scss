@@ -117,12 +117,12 @@
     .carousel-container {
       .next-button {
         top: 50%;
-        right: 150px;
+        right: 20%;
       }
 
       .prev-button {
         top: 50%;
-        left: 150px;
+        left: 20%;
       }
     }
   }
@@ -135,15 +135,32 @@
     .sub-headline {
       font-size: $text5;
     }
+
     .carousel-container {
       .next-button {
         top: 50%;
-        right: 600px;
+        right: 25%;
       }
 
       .prev-button {
         top: 50%;
-        left: 600px;
+        left: 25%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .article-two {
+    .carousel-container {
+      .next-button {
+        top: 50%;
+        right: 30%;
+      }
+
+      .prev-button {
+        top: 50%;
+        left: 30%;
       }
     }
   }
