@@ -17,6 +17,7 @@
     grid-auto-flow: dense;
     border-radius: 15px;
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 
     img {
       width: 100%;

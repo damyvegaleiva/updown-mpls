@@ -7,6 +7,7 @@ import MenuContainer from "./containers/MenuContainer";
 import EventsContainer from "./containers/EventsContainer";
 import GalleryContainer from "./containers/GalleryContainer";
 import ContactContainer from "./containers/ContactContainer";
+import FormContainer from "./containers/FormContainer";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <Route path="/events" element={<EventsContainer />} />
           <Route path="/gallery" element={<GalleryContainer />} />
           <Route path="/contact" element={<ContactContainer />} />
-          <Route path="/privacy-policy" />
+          <Route path="/privacy-policy" element={<FormContainer />} />
         </Routes>
 
         <FooterContainer />
