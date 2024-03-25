@@ -20,11 +20,11 @@
   margin: 0;
   padding: 0;
   min-width: 0;
+  scroll-behavior: smooth;
 }
 
 body {
   min-height: 100dvh;
-  scroll-behavior: smooth;
   font-size: 62.5%;
   color: map-get($map: $colorMap, $key: "white");
   font-family: $fontDeLaGothic;

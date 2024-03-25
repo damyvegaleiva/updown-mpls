@@ -39,9 +39,9 @@
     h2 {
       padding-bottom: 10px;
       margin-bottom: 10px;
+      text-align: center;
       text-shadow: 4px 2px map-get($map: $colorMap, $key: "purple");
       color: map-get($map: $colorMap, $key: "white");
-      text-align: center;
 
       &:after {
         content: "";
@@ -61,21 +61,16 @@
         font-size: $text1;
       }
 
-      input {
-        font-family: $fontDeLaGothic;
-        font-size: $text1;
-      }
-
       .contact-us__field {
-        width: 100%;
         display: block;
+        width: 100%;
         padding: 5px 10px;
-        outline: none;
+        font-size: $text1;
+        font-family: $fontDeLaGothic;
         border: 2px solid map-get($map: $colorMap, $key: "darkBlack");
         background: map-get($map: $colorMap, $key: "white");
-        font-size: $text1;
-        margin-bottom: 25px;
         transition: 0.3s;
+        outline: none;
 
         &:hover {
           background: map-get($map: $colorMap, $key: "borderContainer");
@@ -87,24 +82,50 @@
         }
       }
 
+      .contact-us__fieldset {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .contact-us__area {
+        min-height: 150px;
+        resize: none;
+      }
+
       .contact-us__subscribe-yes-no {
         font-size: $text1;
         margin-right: 15px;
         margin-left: 5px;
       }
 
-      .contact-us__city-select,
-      .contact-us__fieldset,
-      .contact-us__subscribe-yes-no {
-        margin-bottom: 20px;
-      }
-
       .contact-us__subscribe {
         display: block;
       }
 
-      .contact-us__area {
-        min-height: 150px;
+      .contact-us__error-text {
+        font-size: $text0-75;
+        margin-bottom: 15px;
+        color: map-get($map: $colorMap, $key: "magenta");
+        text-shadow: 1px 1px 2px rgb(254, 254, 254), 0 0 1em rgb(254, 254, 254),
+          0 0 0.1em rgb(255, 255, 255);
+      }
+
+      .contact-us_form-success {
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+        align-items: center;
+        gap: 10px;
+
+        .contact-us__form-success-text {
+          margin-top: 25px;
+          color: map-get($map: $colorMap, $key: "cyan");
+          text-transform: uppercase;
+          font-size: $text1-25;
+          text-align: center;
+          text-shadow: 1px 1px 2px rgb(254, 254, 254),
+            0 0 1em rgb(254, 254, 254), 0 0 0.1em rgb(255, 255, 255);
+        }
       }
     }
   }
