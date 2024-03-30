@@ -1,4 +1,9 @@
+import { useLocation } from "react-router-dom";
+
 const HeaderContainer = () => {
+  const { pathname } = useLocation();
+  const componentId = pathname === "/" ? "home" : pathname.substring(1);
+
   return (
     <header>
       <div className="header__top-container">
@@ -12,7 +17,7 @@ const HeaderContainer = () => {
       <div className="header__bottom-container">
         <p className="header__insert-coin">
           Insert
-          <a href="#home">
+          <a href={`#${componentId}`}>
             <img
               src="../images/up-down-logo.png"
               alt="Up-Down logo: A circle with an angle up and an angle down inside of the circle."

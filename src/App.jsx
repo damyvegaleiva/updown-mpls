@@ -7,6 +7,7 @@ import MenuContainer from "./containers/MenuContainer";
 import EventsContainer from "./containers/EventsContainer";
 import GalleryContainer from "./containers/GalleryContainer";
 import ContactContainer from "./containers/ContactContainer";
+import ScrollToComponent from "./components/ScrollToComponent";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <BrowserRouter>
         <HeaderContainer />
         <NavBarContainer />
-
+        <ScrollToComponent />
         <Routes>
           <Route path="/" element={<HomeContainer />} />
           <Route path="/menu" element={<MenuContainer />} />

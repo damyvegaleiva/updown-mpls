@@ -1,6 +1,6 @@
 const MenuContainer = () => {
   return (
-    <main>
+    <main id="menu">
       <h1 className="headline-pages">Menu</h1>
 
       <article className="menus-container">

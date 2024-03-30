@@ -2,7 +2,7 @@ import FormContainer from "./FormContainer";
 
 const ContactContainer = () => {
   return (
-    <main className="contact-us__contenedor">
+    <main className="contact-us__contenedor" id="contact">
       <h1 className="headline-pages">Contact</h1>
 
       <div className="contact-us__box">

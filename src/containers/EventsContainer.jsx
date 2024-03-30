@@ -1,6 +1,6 @@
 const EventsContainer = () => {
   return (
-    <main>
+    <main id="events">
       <h1 className="headline-pages">Events</h1>
 
       <section className="calendar__container">
