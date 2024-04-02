@@ -2,6 +2,27 @@ main {
   padding-top: 50px;
 }
 
+.back-to-the-top-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  bottom: 20px;
+  right: 20px;
+  background: map-get($map: $colorMap, $key: "darkBlack");
+  color: map-get($map: $colorMap, $key: "white");
+  box-shadow: -2px -2px 0px map-get($map: $colorMap, $key: "magenta"),
+    2px 2px 0px map-get($map: $colorMap, $key: "neonCyan");
+  border-radius: 50%;
+  z-index: 1;
+
+  svg {
+    font-size: 25px;
+  }
+}
+
 .headline-pages {
   width: 100%;
   font-size: $text2-75;
@@ -48,6 +69,11 @@ main {
 // ---------------------------------- BREAKPOINT ---------------------------------- //
 
 @media screen and (min-width: 450px) {
+  .back-to-the-top-btn {
+    width: 45px;
+    height: 45px;
+  }
+
   .sub-headline {
     font-size: $text3;
   }
@@ -56,6 +82,15 @@ main {
 @media screen and (min-width: 768px) {
   .headline-pages {
     font-size: $text4;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .back-to-the-top-btn {
+    &:hover {
+      cursor: pointer;
+      color: map-get($map: $colorMap, $key: "borderContainer");
+    }
   }
 }
 

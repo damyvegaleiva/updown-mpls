@@ -1,29 +1,3 @@
-// const specialsImages = [
-//   {
-//     img_url: "./images/monday-special.jpg",
-//     alt: "Monday special: one dollar off all draft beers.",
-//   },
-//   {
-//     img_url: "./images/wednesday-special.jpg",
-//     alt: "Wednesday special: one dollar off domestic tallboys.",
-//   },
-//   {
-//     img_url: "./images/thursday-special.jpg",
-//     alt: "Thursday special: ten cent tokens.",
-//   },
-//   {
-//     img_url: "./images/friday-special.jpg",
-//     alt: "Friday special: first one hundred people gets 20 free tokens.",
-//   },
-//   {
-//     img_url: "./images/saturday-special.jpg",
-//     alt: "Saturday special: two for 1 tokens noon to 9pm.",
-//   },
-//   {
-//     img_url: "./images/sunday-special.jpg",
-//     alt: "Sunday special: Six Pack and a Pound. Six domestic tallboys, 80 tokens and a fanny pack for $25.",
-//   },
-// ];
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { RxTriangleLeft, RxTriangleRight } from "react-icons/rx";
@@ -36,6 +10,15 @@ const specialsImages = [
   "./images/friday-special.jpg",
   "./images/saturday-special.jpg",
   "./images/sunday-special.jpg",
+];
+
+const specialsAlt = [
+  "Monday special: one dollar off all draft beers.",
+  "Wednesday special: one dollar off domestic tallboys.",
+  "Thursday special: ten cent tokens.",
+  "Friday special: first one hundred people gets 20 free tokens.",
+  "Saturday special: two for 1 tokens noon to 9pm.",
+  "Sunday special: Six Pack and a Pound. Six domestic tallboys, 80 tokens and a fanny pack for $25.",
 ];
 
 const variants = {
@@ -75,14 +58,14 @@ const CarouselContainer = () => {
     setDIrection(1);
 
     if (index === specialsImages.length - 1) return setIndex(0);
-    setIndex((prev) => prev + 1);
+    return setIndex((prev) => prev + 1);
   };
 
   const handleClickPrevious = () => {
     setDIrection(0);
 
     if (index === 0) return setIndex(specialsImages.length - 1);
-    setIndex((prev) => prev - 1);
+    return setIndex((prev) => prev - 1);
   };
 
   return (
@@ -103,7 +86,7 @@ const CarouselContainer = () => {
             exit="exit"
             key={specialsImages[index]}
             src={specialsImages[index]}
-            alt={"specialsImages[index].img_url"}
+            alt={specialsAlt[index]}
             custom={direction}
           />
         </AnimatePresence>
