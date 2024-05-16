@@ -2,13 +2,14 @@ import { NavLink } from "react-router-dom";
 
 const ErrorContainer = () => {
   return (
-    <main>
+    <main id="error404">
       <section className="notFound">
         <div className="notFound__images">
           <img
             src="../images/error404/backToTheHomepage.webp"
             alt="Back to the Homepage"
           />
+
           <img
             src="../images/error404/Delorean.webp"
             alt="The Delorean, The Doc y Marty McFly from back to the future."
