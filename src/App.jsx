@@ -16,6 +16,7 @@ function App() {
         <HeaderContainer />
         <NavBarContainer />
         <ScrollToComponent />
+
         <Routes>
           <Route path="/" element={<HomeContainer />} />
           <Route path="/menu" element={<MenuContainer />} />

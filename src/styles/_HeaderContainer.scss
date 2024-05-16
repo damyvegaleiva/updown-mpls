@@ -6,9 +6,21 @@ header {
   width: 100%;
   border: 0.25rem solid map-get($map: $colorMap, $key: "white");
   border-radius: 20px;
-  animation: flicker 3.5s forwards alternate;
   font-family: $fontTourney;
   text-transform: uppercase;
+  text-shadow: -0.1rem -0.1rem 1rem map-get($map: $colorMap, $key: "white"),
+    0.2rem 0.2rem 1rem map-get($map: $colorMap, $key: "white"),
+    0 0 2rem map-get($map: $colorMap, $key: "neonCyan"),
+    0 0 4rem map-get($map: $colorMap, $key: "neonCyan"),
+    0 0 6rem map-get($map: $colorMap, $key: "neonCyan"),
+    0 0 8rem map-get($map: $colorMap, $key: "neonCyan"),
+    0 0 10rem map-get($map: $colorMap, $key: "neonCyan");
+  box-shadow: 0 0 0.5rem map-get($map: $colorMap, $key: "white"),
+    inset 0 0 0.5rem map-get($map: $colorMap, $key: "white"),
+    0 0 2rem map-get($map: $colorMap, $key: "magenta"),
+    inset 0 0 2rem map-get($map: $colorMap, $key: "magenta"),
+    0 0 4rem map-get($map: $colorMap, $key: "magenta"),
+    inset 0 0 4rem map-get($map: $colorMap, $key: "magenta");
 
   .header__top-container {
     height: 100%;
@@ -56,11 +68,12 @@ header {
 @media screen and (min-width: 992px) {
   header {
     @include display-f(column, nowrap, center, center);
-    height: 100vh;
-    padding: 10px 0;
+    height: 70vh;
+    padding: 15px 0;
+    margin: auto;
 
     .header__updown {
-      font-size: 15rem;
+      font-size: 11rem;
     }
 
     .header__location {
@@ -71,13 +84,13 @@ header {
       display: block;
 
       img {
-        width: 75px;
+        width: 65px;
         margin: 0 20px;
       }
 
       .header__insert-coin {
         @include display-f(row, wrap, center, center);
-        font-size: $text2;
+        font-size: $text1-75;
         text-shadow: none;
         -webkit-text-stroke: 1px map-get($map: $colorMap, $key: "darkBlack");
         -webkit-text-fill-color: rgb(255, 255, 0);
@@ -89,43 +102,6 @@ header {
 }
 
 // ---------------------------------- ANIMATIONS ---------------------------------- //
-@keyframes flicker {
-  10%,
-  19%,
-  21%,
-  23%,
-  25%,
-  29%,
-  36%,
-  54%,
-  56%,
-  99%,
-  100% {
-    text-shadow: -0.1rem -0.1rem 1rem map-get($map: $colorMap, $key: "white"),
-      0.2rem 0.2rem 1rem map-get($map: $colorMap, $key: "white"),
-      0 0 2rem map-get($map: $colorMap, $key: "neonCyan"),
-      0 0 4rem map-get($map: $colorMap, $key: "neonCyan"),
-      0 0 6rem map-get($map: $colorMap, $key: "neonCyan"),
-      0 0 8rem map-get($map: $colorMap, $key: "neonCyan"),
-      0 0 10rem map-get($map: $colorMap, $key: "neonCyan");
-
-    box-shadow: 0 0 0.5rem map-get($map: $colorMap, $key: "white"),
-      inset 0 0 0.5rem map-get($map: $colorMap, $key: "white"),
-      0 0 2rem map-get($map: $colorMap, $key: "magenta"),
-      inset 0 0 2rem map-get($map: $colorMap, $key: "magenta"),
-      0 0 4rem map-get($map: $colorMap, $key: "magenta"),
-      inset 0 0 4rem map-get($map: $colorMap, $key: "magenta");
-  }
-
-  20%,
-  24%,
-  27%,
-  35%,
-  55% {
-    text-shadow: none;
-    box-shadow: none;
-  }
-}
 
 @keyframes insert-coin {
   25%,

@@ -5,8 +5,6 @@ import BackToTheTopButton from "../components/BackToTheTopButton";
 const HomeContainer = () => {
   return (
     <main id="home">
-      <h1 className="headline-pages">WELCOME</h1>
-
       <section>
         <ArticleOne />
         <ArticleTwo />
