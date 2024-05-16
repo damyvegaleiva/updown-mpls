@@ -1,0 +1,45 @@
+.notFound {
+  @include display-f(row, nowrap, center, center);
+  margin: auto;
+  max-width: 1920px;
+  font-family: $fontPressStart;
+  text-align: center;
+  text-shadow: 5px 2px map-get($map: $colorMap, $key: "purple");
+
+  .notFound__images {
+    img {
+      width: 75%;
+    }
+  }
+
+  .notFound__text {
+    height: 50vh;
+
+    h1,
+    h2,
+    h3 {
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      color: rgb(228, 21, 21);
+      font-size: $text3;
+      margin-top: 20px;
+    }
+
+    h2 {
+      font-size: $text4-25;
+    }
+
+    h3 {
+      font-size: $text4-25;
+    }
+
+    a {
+      text-decoration: none;
+      color: map-get($map: $colorMap, $key: "white");
+      font-size: $text2-25;
+      padding: 15px;
+    }
+  }
+}

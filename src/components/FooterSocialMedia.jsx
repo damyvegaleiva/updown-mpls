@@ -6,8 +6,8 @@ import {
 
 const FooterSocialMedia = () => {
   return (
-    <div className="footer__content">
-      <h3 className="footer__heading">Up-Down Minneapolis</h3>
+    <div className="footer__social-content">
+      <h3 className="footer__main-heading">Up-Down Minneapolis</h3>
 
       <p className="footer__social-parrafo">Follow us on social media</p>
 

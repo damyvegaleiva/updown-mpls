@@ -8,6 +8,7 @@ import EventsContainer from "./containers/EventsContainer";
 import GalleryContainer from "./containers/GalleryContainer";
 import ContactContainer from "./containers/ContactContainer";
 import ScrollToComponent from "./components/ScrollToComponent";
+import ErrorContainer from "./containers/ErrorContainer";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           <Route path="/events" element={<EventsContainer />} />
           <Route path="/gallery" element={<GalleryContainer />} />
           <Route path="/contact" element={<ContactContainer />} />
-          <Route path="/privacy-policy" />
+          <Route path="/error404" element={<ErrorContainer />} />
         </Routes>
 
         <FooterContainer />

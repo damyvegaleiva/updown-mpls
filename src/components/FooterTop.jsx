@@ -14,6 +14,7 @@ const FooterTop = () => {
         secondParagraph={"Sat-Sun 11am to 2am"}
         thirdParagraph={"(Must be 21+ to enter)"}
       />
+
       <FooterDiv
         className={"footer__contact"}
         heading={"Contact"}
@@ -21,6 +22,7 @@ const FooterTop = () => {
         secondParagraph={"Have a question?"}
         thirdParagraph={"Shoot us an email"}
       />
+
       <FooterDiv
         className={"footer__address"}
         heading={"Address"}
