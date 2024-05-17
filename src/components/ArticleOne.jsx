@@ -11,8 +11,9 @@ const ArticleOne = () => {
       viewport={{ once: true }}
     >
       <h1 className="article-one-subhead">
-        The <span className="span-subhead"> next generation </span>of arcade
-        bars has arrived to Minneapolis.
+        The <i>ultimate</i> ARCADE BAR EXPERIENCE.
+        <br />
+        Visit us in Minneapolis.
       </h1>
 
       <ParrafosContainer />
