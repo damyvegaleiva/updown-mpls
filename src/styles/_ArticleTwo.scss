@@ -15,17 +15,79 @@
     inset: 0;
   }
 
+  .sub-headline {
+    margin-bottom: 50px;
+  }
+
   .carousel-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    h2 {
+      font-size: $text2;
+      width: 95%;
+      max-width: 350px;
+      color: map-get($map: $colorMap, $key: "darkBlack");
+      text-align: center;
+      text-decoration: underline;
+      text-transform: uppercase;
+      text-shadow: 3px 2px map-get($map: $colorMap, $key: "purple");
+      z-index: 10;
+
+      &:before {
+        content: "";
+        width: 90%;
+        position: absolute;
+        height: 70px;
+        inset: 0;
+        background: map-get($map: $colorMap, $key: "white");
+        margin: auto;
+        z-index: -10;
+        transform: rotate(-0.01turn);
+      }
+    }
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      height: 110px;
+      font-size: $text1-15;
+      color: map-get($map: $colorMap, $key: "white");
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: 1px 2px map-get($map: $colorMap, $key: "purple");
+      margin-bottom: 20px;
+      z-index: 10;
+
+      &:before {
+        content: "";
+        width: 100%;
+        position: absolute;
+        inset: 0;
+        background: map-get($map: $colorMap, $key: "darkBlack");
+        background: url("./images/bg-special.jpg");
+        margin: auto;
+        z-index: -10;
+        transform: rotate(-0.01turn);
+      }
+    }
+  }
+
+  .carousel {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 25px;
     width: 100%;
     margin: auto;
 
     .carousel__slidershow {
       width: 90%;
-      max-width: 400px;
+      max-width: 300px;
       aspect-ratio: 1 / 1;
       margin: auto;
       border-radius: 16px;
@@ -87,6 +149,12 @@
     }
 
     .carousel-container {
+      p {
+        max-width: 600px;
+      }
+    }
+
+    .carousel {
       .next-button {
         top: 50%;
         right: 100px;
@@ -115,7 +183,7 @@
       font-size: $text4;
     }
 
-    .carousel-container {
+    .carousel {
       .next-button {
         top: 50%;
         right: 20%;
@@ -138,6 +206,12 @@
     }
 
     .carousel-container {
+      p {
+        max-width: 700px;
+      }
+    }
+
+    .carousel {
       .next-button {
         top: 50%;
         right: 25%;
@@ -153,7 +227,7 @@
 
 @media screen and (min-width: 1600px) {
   .article-two {
-    .carousel-container {
+    .carousel {
       .next-button {
         top: 50%;
         right: 30%;

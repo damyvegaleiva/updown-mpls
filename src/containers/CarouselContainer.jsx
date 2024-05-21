@@ -1,102 +1,32 @@
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { RxTriangleLeft, RxTriangleRight } from "react-icons/rx";
+import Carousel from "../components/Carousel";
 
-const specialsImages = [
-  "./images/monday-special.jpg",
-  "./images/wednesday-special.jpg",
-  "./images/thursday-special.jpg",
-  "./images/thursday-special.jpg",
-  "./images/friday-special.jpg",
-  "./images/saturday-special.jpg",
-  "./images/sunday-special.jpg",
+const specialsText = [
+  { day: "Monday", text: "$1 OFF All Beer on Tap" },
+  { day: "Tuesday", text: "$1 OFF Minnesota Beer on Tap" },
+  { day: "Wednesday", text: "$3 Domestic Tallboys" },
+  { day: "Thursday", text: "10 Cent Tokens All Night" },
+  {
+    day: "Friday",
+    text: "First 100 people get 20 Free tokens, $2 slices until 8PM",
+  },
+  { day: "Saturday", text: "2 For 1 Tokens until 9PM" },
+  {
+    day: "Sunday",
+    text: "Six-Pack and A Pound: $25 For A Six-Pack Of Domestic Cans",
+  },
 ];
-
-const specialsAlt = [
-  "Monday special: one dollar off all draft beers.",
-  "Wednesday special: one dollar off domestic tallboys.",
-  "Thursday special: ten cent tokens.",
-  "Friday special: first one hundred people gets 20 free tokens.",
-  "Saturday special: two for 1 tokens noon to 9pm.",
-  "Sunday special: Six Pack and a Pound. Six domestic tallboys, 80 tokens and a fanny pack for $25.",
-];
-
-const variants = {
-  initial: (direction) => {
-    return {
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0,
-    };
-  },
-
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      x: { type: "spring", stiffness: 300, damping: 30 },
-      opacity: { duration: 0.2 },
-    },
-  },
-
-  exit: (direction) => {
-    return {
-      x: direction > 0 ? -1000 : 1000,
-      opacity: 0,
-      transition: {
-        x: { type: "spring", stiffness: 300, damping: 30 },
-        opacity: { duration: 0.2 },
-      },
-    };
-  },
-};
 
 const CarouselContainer = () => {
   const [index, setIndex] = useState(0);
-  const [direction, setDIrection] = useState(0);
-
-  const handleClickNext = () => {
-    setDIrection(1);
-
-    if (index === specialsImages.length - 1) return setIndex(0);
-    return setIndex((prev) => prev + 1);
-  };
-
-  const handleClickPrevious = () => {
-    setDIrection(0);
-
-    if (index === 0) return setIndex(specialsImages.length - 1);
-    return setIndex((prev) => prev - 1);
-  };
 
   return (
     <div className="carousel-container">
-      <button className="prev-button" onClick={handleClickPrevious}>
-        <span>
-          <RxTriangleLeft />
-        </span>
-      </button>
+      <h2>{specialsText[index].day}</h2>
 
-      <div className="carousel__slidershow">
-        <AnimatePresence initial={false} custom={direction}>
-          <motion.img
-            className="slides"
-            variants={variants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            key={specialsImages[index]}
-            src={specialsImages[index]}
-            alt={specialsAlt[index]}
-            custom={direction}
-          />
-        </AnimatePresence>
-      </div>
+      <Carousel index={index} setIndex={setIndex} specialsText={specialsText} />
 
-      <button className="next-button" onClick={handleClickNext}>
-        <span>
-          <RxTriangleRight />
-        </span>
-      </button>
+      <p>{specialsText[index].text}</p>
     </div>
   );
 };
