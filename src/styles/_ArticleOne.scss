@@ -66,6 +66,7 @@
 [class*="parrafo-"] {
   h2 {
     font-size: 1.4rem;
+    text-transform: uppercase;
   }
 
   svg {
@@ -82,8 +83,8 @@
   h2,
   svg,
   p {
-    color: map-get($map: $colorMap, $key: "text");
-    text-shadow: 1px 1px map-get($map: $colorMap, $key: "purple");
+    color: map-get($map: $colorMap, $key: "white");
+    text-shadow: 1px 2px map-get($map: $colorMap, $key: "purple");
     z-index: 1;
   }
 }
@@ -105,7 +106,7 @@
     position: absolute;
     inset: 2px;
     border-radius: 15px;
-    background: rgb(5, 5, 5);
+    background: url("/images/bg-special.jpg");
     z-index: 1;
   }
 

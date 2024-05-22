@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import coinSound from "../../public/audio/coin-sound.mp3";
+import coinSound from "/src/assets/coin-sound.mp3";
 
 const HeaderBottom = () => {
   const { pathname } = useLocation();
