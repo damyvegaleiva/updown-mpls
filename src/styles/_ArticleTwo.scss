@@ -70,7 +70,7 @@
         position: absolute;
         inset: 0;
         background: map-get($map: $colorMap, $key: "darkBlack");
-        background: url("./images/bg-special.jpg");
+        background: url("/images/bg-special.jpg");
         margin: auto;
         z-index: -10;
         transform: rotate(-0.01turn);
