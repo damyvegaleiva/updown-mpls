@@ -19,7 +19,7 @@ const BackToTheTopButton = () => {
   }, []);
 
   return (
-    <a href="#home" className={isVisible && "back-to-the-top-btn"}>
+    <a href="#home" className={isVisible ? "back-to-the-top-btn" : undefined}>
       <BsArrowUpShort />
     </a>
   );
