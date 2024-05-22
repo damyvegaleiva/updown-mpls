@@ -35,7 +35,7 @@
       text-decoration: underline;
       text-transform: uppercase;
       text-shadow: 3px 2px map-get($map: $colorMap, $key: "purple");
-      z-index: 10;
+      z-index: 1;
 
       &:before {
         content: "";
@@ -45,7 +45,7 @@
         inset: 0;
         background: map-get($map: $colorMap, $key: "white");
         margin: auto;
-        z-index: -10;
+        z-index: -1;
         transform: rotate(-0.01turn);
       }
     }
@@ -62,7 +62,7 @@
       text-transform: uppercase;
       text-shadow: 1px 2px map-get($map: $colorMap, $key: "purple");
       margin-bottom: 20px;
-      z-index: 10;
+      z-index: 1;
 
       &:before {
         content: "";
@@ -72,7 +72,7 @@
         background: map-get($map: $colorMap, $key: "darkBlack");
         background: url("/images/bg-special.jpg");
         margin: auto;
-        z-index: -10;
+        z-index: -1;
         transform: rotate(-0.01turn);
       }
     }
