@@ -98,6 +98,7 @@
   padding: 25px;
   border-radius: 15px;
   overflow: hidden;
+  max-width: 750px;
 
   &::before {
     content: "";
@@ -161,6 +162,10 @@
     align-content: center;
     max-width: 1250px;
     padding: 30px;
+  }
+
+  .box {
+    max-width: none;
   }
 
   .article-one-subhead {
