@@ -42,17 +42,17 @@ const variants = {
 };
 
 const Carousel = ({ index, setIndex, specialsText }) => {
-  const [direction, setDIrection] = useState(0);
+  const [direction, setDirection] = useState(0);
 
   const handleClickNext = () => {
-    setDIrection(1);
+    setDirection(1);
 
     if (index === specialsImages.length - 1) return setIndex(0);
     return setIndex((prev) => prev + 1);
   };
 
   const handleClickPrevious = () => {
-    setDIrection(0);
+    setDirection(0);
 
     if (index === 0) return setIndex(specialsImages.length - 1);
     return setIndex((prev) => prev - 1);
