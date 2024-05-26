@@ -7,15 +7,16 @@ const useCarousel = (imagesLength) => {
 
   useEffect(() => {
     setDirection(1);
-    const interval = setInterval(() => {
-      if (!isHovered) {
+
+    if (!isHovered) {
+      const interval = setInterval(() => {
         setIndex((prevIndex) =>
           prevIndex === imagesLength - 1 ? 0 : prevIndex + 1
         );
-      }
-    }, 3500);
+      }, 3500);
 
-    return () => clearInterval(interval);
+      return () => clearInterval(interval);
+    }
   }, [isHovered, imagesLength]);
 
   const handleClickNext = () => {
