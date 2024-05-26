@@ -1,5 +1,5 @@
-import { useState } from "react";
 import Carousel from "../components/Carousel";
+import useCarousel from "../hooks/useCarousel";
 
 const specialsText = [
   { day: "Monday", text: "$1 OFF All Beer on Tap" },
@@ -17,14 +17,32 @@ const specialsText = [
   },
 ];
 
+const specialsImages = [
+  "./images/monday-special.png",
+  "./images/tuesday-special.png",
+  "./images/wednesday-special.png",
+  "./images/thursday-special.png",
+  "./images/friday-special.png",
+  "./images/saturday-special.png",
+  "./images/sunday-special.png",
+];
+
 const CarouselContainer = () => {
-  const [index, setIndex] = useState(0);
+  const { index, direction, handleClickNext, handleClickPrev, setIsHovered } =
+    useCarousel(specialsImages.length);
 
   return (
     <div className="carousel-container">
       <h2>{specialsText[index].day}</h2>
 
-      <Carousel index={index} setIndex={setIndex} specialsText={specialsText} />
+      <Carousel
+        index={index}
+        specialsText={specialsText}
+        handleClickNext={handleClickNext}
+        handleClickPrev={handleClickPrev}
+        setIsHovered={setIsHovered}
+        direction={direction}
+      />
 
       <p>{specialsText[index].text}</p>
     </div>
