@@ -1,15 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
 
-const specialsImages = [
-  "./images/monday-special.png",
-  "./images/tuesday-special.png",
-  "./images/wednesday-special.png",
-  "./images/thursday-special.png",
-  "./images/friday-special.png",
-  "./images/saturday-special.png",
-  "./images/sunday-special.png",
-];
-
 const variants = {
   initial: (direction) => {
     return {
@@ -39,7 +29,7 @@ const variants = {
   },
 };
 
-const CarouselSlider = ({ direction, index, specialsText }) => {
+const CarouselSlider = ({ index, direction, specialsImages }) => {
   return (
     <div className="carousel__slidershow">
       <AnimatePresence initial={false} custom={direction}>
@@ -49,9 +39,9 @@ const CarouselSlider = ({ direction, index, specialsText }) => {
           initial="initial"
           animate="animate"
           exit="exit"
-          key={specialsImages[index]}
-          src={specialsImages[index]}
-          alt={specialsText[index].text}
+          key={specialsImages[index].id}
+          src={specialsImages[index].src}
+          alt={specialsImages[index].text}
           custom={direction}
         />
       </AnimatePresence>

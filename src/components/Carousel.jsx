@@ -4,31 +4,31 @@ import CarouselSlider from "./CarouselSlider";
 
 const Carousel = ({
   index,
-  specialsText,
+  direction,
+  setIsHovered,
   handleClickNext,
   handleClickPrev,
-  setIsHovered,
-  direction,
+  specialsImages,
 }) => {
   return (
     <div className="carousel">
       <CarouselButton
         className={"prev-button"}
-        handleClick={handleClickPrev}
         setIsHovered={setIsHovered}
+        handleClick={handleClickPrev}
         svgIcon={<RxTriangleLeft />}
       />
 
       <CarouselSlider
         index={index}
-        specialsText={specialsText}
         direction={direction}
+        specialsImages={specialsImages}
       />
 
       <CarouselButton
         className={"next-button"}
-        handleClick={handleClickNext}
         setIsHovered={setIsHovered}
+        handleClick={handleClickNext}
         svgIcon={<RxTriangleRight />}
       />
     </div>

@@ -1,4 +1,4 @@
-const CarouselButton = ({ handleClick, className, svgIcon, setIsHovered }) => {
+const CarouselButton = ({ className, setIsHovered, handleClick, svgIcon }) => {
   return (
     <button
       className={className}
