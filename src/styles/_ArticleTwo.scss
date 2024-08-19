@@ -5,11 +5,8 @@
   padding: 0 0 15px;
 
   &:before {
-    background-image: url("/images/slider-background.jpg");
     content: "";
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: url("/images/slider-background.jpg") no-repeat center/cover;
     border-radius: 25px;
     position: absolute;
     inset: 0;
