@@ -220,10 +220,12 @@
 @keyframes animate {
   0% {
     transform: rotate(0deg);
+    will-change: transform;
   }
 
   100% {
     transform: rotate(360deg);
+    will-change: transform;
   }
 }
 
