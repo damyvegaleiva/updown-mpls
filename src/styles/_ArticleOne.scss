@@ -129,6 +129,7 @@
     z-index: -1;
     padding: 1.5px;
     animation: 3s spin linear infinite;
+    will-change: transform;
   }
 
   &::after {
