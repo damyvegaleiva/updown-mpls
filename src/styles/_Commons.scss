@@ -25,15 +25,16 @@ main {
 
 .headline-pages {
   width: 100%;
+  padding: 5px 0;
   font-size: $text2-75;
-  text-shadow: 5px 2px map-get($map: $colorMap, $key: "purple");
   color: map-get($map: $colorMap, $key: "white");
   border-left: 3px solid map-get($map: $colorMap, $key: "magenta");
   border-right: 3px solid map-get($map: $colorMap, $key: "neonCyan");
   background: map-get($map: $colorMap, $key: "lightBlack");
+  text-shadow: 5px 2px map-get($map: $colorMap, $key: "purple");
   text-align: center;
-  padding: 5px 0;
   text-decoration: underline;
+  font-weight: 100;
   margin-bottom: 75px;
   text-transform: uppercase;
   backdrop-filter: blur(8px);
@@ -64,6 +65,7 @@ main {
   text-align: center;
   text-transform: uppercase;
   text-decoration: underline;
+  font-weight: 100;
 }
 
 // ---------------------------------- BREAKPOINT ---------------------------------- //

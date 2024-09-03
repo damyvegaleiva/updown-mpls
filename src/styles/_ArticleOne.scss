@@ -24,6 +24,7 @@
   text-shadow: 5px 2px map-get($map: $colorMap, $key: "purple");
   order: 1;
   line-height: 4rem;
+  font-weight: 100;
 
   i {
     text-decoration: underline;
@@ -67,6 +68,7 @@
   h2 {
     font-size: 1.4rem;
     text-transform: uppercase;
+    font-weight: 100;
   }
 
   svg {
