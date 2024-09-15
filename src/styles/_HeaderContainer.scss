@@ -1,33 +1,35 @@
 header {
-  background: url("/images/up-down-cover.jpg");
-  background-position: center;
-  background-size: cover;
-  height: 300px;
-  width: 100%;
-  border: 0.25rem solid map-get($map: $colorMap, $key: "white");
+  width: 98%;
+  background: url("/images/header-bg.jpeg") no-repeat top center / cover;
+  height: 97.5vh;
   border-radius: 20px;
   font-family: $fontTourney;
   text-transform: uppercase;
-  text-shadow: -0.1rem -0.1rem 1rem map-get($map: $colorMap, $key: "white"),
-    0.2rem 0.2rem 1rem map-get($map: $colorMap, $key: "white"),
-    0 0 2rem map-get($map: $colorMap, $key: "neonCyan"),
-    0 0 4rem map-get($map: $colorMap, $key: "neonCyan"),
-    0 0 6rem map-get($map: $colorMap, $key: "neonCyan"),
-    0 0 8rem map-get($map: $colorMap, $key: "neonCyan"),
-    0 0 10rem map-get($map: $colorMap, $key: "neonCyan");
-  box-shadow: 0 0 0.5rem map-get($map: $colorMap, $key: "white"),
-    inset 0 0 0.5rem map-get($map: $colorMap, $key: "white"),
-    0 0 2rem map-get($map: $colorMap, $key: "magenta"),
-    inset 0 0 2rem map-get($map: $colorMap, $key: "magenta"),
-    0 0 4rem map-get($map: $colorMap, $key: "magenta"),
-    inset 0 0 4rem map-get($map: $colorMap, $key: "magenta");
+  animation: flicker 2.5s step-end 1 forwards;
+  margin: 10px auto 5px;
+  @include display-f(column, nowrap, center, center);
+  gap: 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: #000;
+    inset: 0;
+    opacity: 0.9;
+    animation: flicker 2.5s step-end 1 forwards;
+  }
 
   .header__top-container {
-    height: 100%;
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    animation: textFlicker 2.5s step-end 1 forwards;
+    z-index: 5;
   }
 
   .header__updown {
@@ -41,19 +43,31 @@ header {
   .header__updown,
   .header__location {
     color: #0398b3;
-    margin: 0;
   }
 
   .header__bottom-container {
-    display: none;
+    z-index: 5;
+
+    .header__insert-coin {
+      @include display-f(row, wrap, center, center);
+      font-size: $text1-5;
+      -webkit-text-stroke: 1px map-get($map: $colorMap, $key: "darkBlack");
+      -webkit-text-fill-color: rgb(255, 255, 0);
+      filter: brightness(125%);
+      animation: 4s insert-coin ease-in-out 2.25s infinite;
+      visibility: hidden;
+
+      img {
+        width: 50px;
+        margin: 0 10px;
+      }
+    }
   }
 }
 
 // ---------------------------------- BREAKPOINT ---------------------------------- //
 @media screen and (min-width: 768px) {
   header {
-    height: 350px;
-
     .header__updown {
       font-size: $text6;
     }
@@ -68,9 +82,12 @@ header {
 @media screen and (min-width: 992px) {
   header {
     @include display-f(column, nowrap, center, center);
-    height: 70vh;
-    padding: 15px 0;
-    margin: auto;
+    gap: 25px;
+    height: 98vh;
+
+    .header__top-container {
+      height: 50%;
+    }
 
     .header__updown {
       font-size: 11rem;
@@ -81,22 +98,22 @@ header {
     }
 
     .header__bottom-container {
-      display: block;
-
-      img {
-        width: 65px;
-        margin: 0 20px;
-      }
-
       .header__insert-coin {
-        @include display-f(row, wrap, center, center);
-        font-size: $text1-75;
-        text-shadow: none;
-        -webkit-text-stroke: 1px map-get($map: $colorMap, $key: "darkBlack");
-        -webkit-text-fill-color: rgb(255, 255, 0);
-        filter: brightness(125%);
-        animation: insert-coin 3s linear infinite;
+        img {
+          width: 65px;
+          margin: 0 20px;
+        }
       }
+
+      // .header__insert-coin {
+      //   @include display-f(row, wrap, center, center);
+      //   font-size: $text1-75;
+      //   -webkit-text-stroke: 1px map-get($map: $colorMap, $key: "darkBlack");
+      //   -webkit-text-fill-color: rgb(255, 255, 0);
+      //   filter: brightness(125%);
+      //   visibility: hidden;
+      //   animation: 4s insert-coin 2.25s ease-in-out infinite;
+      // }
     }
   }
 }
@@ -107,9 +124,52 @@ header {
   25%,
   75% {
     opacity: 0;
+    visibility: inherit;
   }
   50%,
   100% {
     opacity: 1;
+    visibility: hidden;
+  }
+}
+
+@keyframes flicker {
+  0%,
+  15%,
+  30%,
+  50% {
+    box-shadow: none;
+    outline: none;
+    text-shadow: none;
+  }
+  5%,
+  10%,
+  20%,
+  25%,
+  80%,
+  100% {
+    box-shadow: 0 0 0.5rem map-get($map: $colorMap, $key: "text"),
+      inset 0 0 0.5rem map-get($map: $colorMap, $key: "text"),
+      0 0 2rem map-get($map: $colorMap, $key: "cyan"),
+      inset 0 0 2rem map-get($map: $colorMap, $key: "cyan"),
+      inset 0 0 2rem map-get($map: $colorMap, $key: "cyan");
+    outline: 5px solid map-get($map: $colorMap, $key: "text");
+  }
+}
+
+@keyframes textFlicker {
+  0%,
+  30% {
+    visibility: hidden;
+    text-shadow: none;
+  }
+  10%,
+  50%,
+  100% {
+    visibility: inherit;
+    text-shadow: -0.1rem -0.1rem 0.5rem map-get($map: $colorMap, $key: "text"),
+      0.2rem 0.2rem 0.5rem map-get($map: $colorMap, $key: "text"),
+      0 0 4rem map-get($map: $colorMap, $key: "cyan"),
+      0 0 6rem map-get($map: $colorMap, $key: "cyan");
   }
 }
