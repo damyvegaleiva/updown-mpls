@@ -1,6 +1,6 @@
-import ParrafosContainer from "../containers/ParrafosContainer";
-import Aside from "./Aside";
 import { motion } from "framer-motion";
+import ParrafosContainer from "../containers/ParrafosContainer";
+
 const ArticleOne = () => {
   return (
     <motion.article
@@ -17,8 +17,6 @@ const ArticleOne = () => {
       </h1>
 
       <ParrafosContainer />
-
-      <Aside />
     </motion.article>
   );
 };

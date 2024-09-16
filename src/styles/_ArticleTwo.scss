@@ -52,7 +52,7 @@
       align-items: center;
       width: 90%;
       height: 110px;
-      font-size: $text1-15;
+      font-size: $text1-5;
       color: map-get($map: $colorMap, $key: "white");
       text-align: center;
       text-transform: uppercase;
@@ -60,6 +60,7 @@
       margin-bottom: 20px;
       z-index: 1;
       overflow: hidden;
+      font-family: $fontBebasNeue;
 
       &:before {
         content: "";
@@ -158,6 +159,7 @@
     .carousel-container {
       p {
         max-width: 600px;
+        font-size: $text1-75;
       }
     }
 

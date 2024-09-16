@@ -14,53 +14,20 @@
 }
 
 .article-one-subhead {
+  font-family: $fontBebasNeue;
   width: 100%;
-  padding: 20px 5px;
-  font-size: $text2;
+  padding: 20px 0;
+  line-height: 4.25rem;
   text-align: center;
+  font-size: $text4-5;
   color: map-get($map: $colorMap, $key: "white");
   border-right: 3px solid map-get($map: $colorMap, $key: "neonCyan");
   border-left: 3px solid map-get($map: $colorMap, $key: "magenta");
   text-shadow: 5px 2px map-get($map: $colorMap, $key: "purple");
-  order: 1;
-  line-height: 4rem;
   font-weight: 100;
 
   i {
     text-decoration: underline;
-  }
-}
-
-.aside-one {
-  text-align: center;
-  order: 2;
-
-  img {
-    width: 100%;
-    max-width: 500px;
-    aspect-ratio: 2/3;
-    border-radius: 20px;
-  }
-
-  .aside-one__parrafo {
-    font-size: $text1-25;
-    padding: 20px 10px;
-    position: absolute;
-    bottom: 8%;
-    background: map-get($map: $colorMap, $key: "lightBlack");
-    text-shadow: 5px 2px map-get($map: $colorMap, $key: "magenta");
-    z-index: 1;
-  }
-
-  .aside-one__photo-by {
-    width: 100%;
-    padding: 3px 0;
-    font-size: $text0-75;
-    position: absolute;
-    bottom: 3%;
-    background: map-get($map: $colorMap, $key: "darkBlack");
-    text-shadow: 2px 1px map-get($map: $colorMap, $key: "magenta");
-    z-index: 1;
   }
 }
 
@@ -140,35 +107,8 @@
   }
 }
 
-.parrafo-one {
-  order: 3;
-}
-
-.parrafo-two {
-  order: 4;
-}
-
-.parrafo-three {
-  order: 5;
-}
-
-.parrafo-four {
-  order: 6;
-}
-
-.parrafo-five {
-  order: 7;
-}
-
-.parrafo-six {
-  order: 8;
-}
-
 // ---------------------------------- BREAKPOINT ---------------------------------- //
 @media screen and (min-width: 768px) {
-  .article-one-subhead {
-    font-size: $text2-75;
-  }
 }
 
 // ---------------------------------- BREAKPOINT ---------------------------------- //
@@ -176,14 +116,12 @@
   .article-one {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "subhead aside";
-    align-content: center;
+    grid-template-areas: "subhead subhead";
     max-width: 1250px;
-    padding: 30px;
+    padding: 25px;
   }
 
   .box {
-    max-width: none;
     p {
       font-size: $text1-5;
     }
@@ -191,40 +129,27 @@
 
   .article-one-subhead {
     grid-area: subhead;
-    margin: auto;
-    text-align: center;
+    text-align: right;
+    text-align: left;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 6rem;
     line-height: 5.5rem;
-  }
-
-  .aside-one {
-    grid-area: aside;
-    margin: auto;
-
-    .aside-one__parrafo {
-      font-size: $text1-25;
-    }
   }
 }
 
 @media screen and (min-width: 1440px) {
   .article-one {
-    grid-template-areas:
-      "subhead aside"
-      "pf1 aside";
+    grid-template-areas: "subhead subhead";
 
     .article-one-subhead {
-      font-size: $text3-5;
-      padding: 0;
-    }
-
-    .aside-one {
-      img {
-        max-width: none;
-      }
+      line-height: 7rem;
+      font-size: 7.5rem;
     }
   }
 }
 
+// ---------------------------------- ANIMATIONS ---------------------------------- //
 @keyframes animate {
   0% {
     transform: rotate(0deg);
