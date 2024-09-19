@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import FormContainer from "./FormContainer";
 
 const ContactContainer = () => {
@@ -5,13 +6,19 @@ const ContactContainer = () => {
     <main className="contact-us__contenedor" id="contact">
       <h1 className="headline-pages">Contact</h1>
 
-      <div className="contact-us__box">
+      <motion.div
+        className="contact-us__box"
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
         <div className="contact-us__left">
           <img src="./images/up-down-minneapolis.png" alt="" />
         </div>
 
         <FormContainer />
-      </div>
+      </motion.div>
     </main>
   );
 };
