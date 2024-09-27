@@ -54,7 +54,7 @@ header {
       -webkit-text-stroke: 1px map-get($map: $colorMap, $key: "darkBlack");
       -webkit-text-fill-color: rgb(255, 255, 0);
       filter: brightness(125%);
-      animation: 4s insert-coin ease-in-out 2.25s infinite;
+      animation: 4s insert-coin ease-in-out 2.75s infinite;
       visibility: hidden;
 
       img {
@@ -135,18 +135,12 @@ header {
 
 @keyframes flicker {
   0%,
-  15%,
-  30%,
-  50% {
+  45% {
     box-shadow: none;
     outline: none;
     text-shadow: none;
   }
-  5%,
-  10%,
-  20%,
   25%,
-  80%,
   100% {
     box-shadow: 0 0 0.5rem map-get($map: $colorMap, $key: "text"),
       inset 0 0 0.5rem map-get($map: $colorMap, $key: "text"),
@@ -159,12 +153,11 @@ header {
 
 @keyframes textFlicker {
   0%,
-  30% {
+  75% {
     visibility: hidden;
     text-shadow: none;
   }
-  10%,
-  50%,
+  55%,
   100% {
     visibility: inherit;
     text-shadow: -0.1rem -0.1rem 0.5rem map-get($map: $colorMap, $key: "text"),
