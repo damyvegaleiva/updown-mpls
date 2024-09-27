@@ -135,12 +135,13 @@ header {
 
 @keyframes flicker {
   0%,
-  45% {
+  75% {
     box-shadow: none;
     outline: none;
     text-shadow: none;
   }
-  25%,
+  55%,
+  95%,
   100% {
     box-shadow: 0 0 0.5rem map-get($map: $colorMap, $key: "text"),
       inset 0 0 0.5rem map-get($map: $colorMap, $key: "text"),
@@ -153,11 +154,12 @@ header {
 
 @keyframes textFlicker {
   0%,
-  75% {
+  45% {
     visibility: hidden;
     text-shadow: none;
   }
-  55%,
+  25%,
+  85%,
   100% {
     visibility: inherit;
     text-shadow: -0.1rem -0.1rem 0.5rem map-get($map: $colorMap, $key: "text"),
