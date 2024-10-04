@@ -1,7 +1,7 @@
 header {
   width: 98%;
   background: url("/images/header-bg.jpeg") no-repeat top center / cover;
-  height: 97.5dvh;
+  height: 97.5svh;
   border-radius: 20px;
   font-family: $fontTourney;
   text-transform: uppercase;
@@ -104,16 +104,6 @@ header {
           margin: 0 20px;
         }
       }
-
-      // .header__insert-coin {
-      //   @include display-f(row, wrap, center, center);
-      //   font-size: $text1-75;
-      //   -webkit-text-stroke: 1px map-get($map: $colorMap, $key: "darkBlack");
-      //   -webkit-text-fill-color: rgb(255, 255, 0);
-      //   filter: brightness(125%);
-      //   visibility: hidden;
-      //   animation: 4s insert-coin 2.25s ease-in-out infinite;
-      // }
     }
   }
 }
