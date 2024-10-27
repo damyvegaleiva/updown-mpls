@@ -3,7 +3,6 @@
   max-width: 1920px;
   margin: auto;
   text-align: center;
-  overflow: hidden;
 
   img {
     width: 80%;
@@ -16,6 +15,7 @@
     background: url("../images/beer-taps.jpg");
     background-size: cover;
     background-position-x: 30%;
+    margin-bottom: 50px;
   }
 
   .menu__pizza-container {
@@ -37,6 +37,10 @@
     display: flex;
     justify-content: center;
     column-gap: 25px;
+
+    .menu__beer-container {
+      margin-bottom: 0;
+    }
 
     img {
       max-width: 700px;
